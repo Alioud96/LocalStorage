@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Livres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestionnaire de Livres</h1>
+    <button id="add-book-btn">Ajouter un Livre</button>
+    <table id="book-table">
+        <div class="row mt-5">
+            <div class="col-12">
+            <table class="table table-bordered" id="crudTable">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Date de Publication</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="book-list">
+            <!-- Les livres seront ajoutés ici dynamiquement -->
+        </tbody>
+    </table>
+
+    <!-- Modal pour l'ajout de livre -->
+    <div id="add-book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ajouter un Livre</h2>
+            <form id="add-book-form">
+                <input type="text" id="name" placeholder="Nom du Livre" required>
+                <input type="text" id="title" placeholder="Titre" required>
+                <input type="text" id="author" placeholder="Auteur" required>
+                <input type="date" id="publish-date" required>
+                <button class="btn btn-success" id="Submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
